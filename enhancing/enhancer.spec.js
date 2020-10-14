@@ -64,7 +64,16 @@ describe("testing failure function", () => {
         const damaged = enhancer.fail(mace)
         expect(damaged.durability).toEqual(mace.durability - 10)
         expect(damaged.enhancement).toEqual(mace.enhancement)
+    });
+
+describe("testing get function", () => {
+    it("changes the name if enhancement is above zero", () => {
+        const renamed = enhancer.get(sword)
+        console.log(renamed)
+        expect(renamed.name).toBe(`[+${sword.enhancement}] ${sword.name}`)
     })
+    
+})
     
 
 })
